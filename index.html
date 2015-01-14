@@ -10,8 +10,35 @@
 <meta name="date" content="2012-12-22T08:30:45+01:00" /> 
 <!-- <link rel="shortcut icon" type="image/x-icon" href="monIcon.ico" /> --> 
 <title>Mon application Web</title> 
+<style type="text/css"> 
+#maDivMenu{padding:25px 15px 0 15px;background:#fcead9;} 
+  ul#monMenu{list-style-type:none;width:100%;position:relative;height:27px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:13px;font-weight:bold;margin:0;padding:11px 0 0 0;} 
+ ul#monMenu li{display:block;float:left;margin:0 0 0 24px;height:27px;} 
+ ul#monMenu li.left{margin:0;} 
+ ul#monMenu li a{display:block;float:left;color:#e06c08;background:#fdf1e5;line-height:27px;text-decoration:none;padding:0 17px 0 18px;height:27px;} 
+ ul#monMenu li a.right{padding-right:19px;} 
+ ul#monMenu li a:hover{color:#fdf1e5;background:#e06c08;} 
+ ul#monMenu li a.current{color:#fdf1e5;background:#e06c08;} 
+ ul#monMenu li a.current:hover{color:#fdf1e5;background:#e06c08;}
+  #monEntete{width:100%;text-align:center;margin:auto;} 
+</style> 
 </head> 
 <body> 
+
+  <div id="monEntete"> 
   <h2><img src="soleil.png" alt="logo du site" />Mon application Web 
-      <img src="soleil.png" alt="logo du site" /></h2> 
+            <img src="soleil.png" alt="logo du site" /></h2> 
+</div> 
+<div id="maDivMenu"> 
+   <ul id="monMenu"> 
+     <li><a href="index.html" title="Accueil" class="current">Accueil</a></li> 
+     <li><a href="index.html" title="Presentation" class="current">Présentation</a></li> 
+     <li><a href="index.html" title="Articles" class="current">Articles</a></li> 
+     <li><a href="index.html" title="Tutos" class="current">Tutos</a></li> 
+      <li><a href="index.html" title="Forums" class="current">Forums</a></li> 
+      <li><a href="index.html" title="Nous contacter" class="current">Nous contacter</a></li> 
+   </ul> 
+</div>
 </body>
+
+
