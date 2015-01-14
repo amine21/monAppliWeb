@@ -58,65 +58,42 @@ caracteres;
             <img src="soleil.png" alt="logo du site" /></h2> 
 </div> 
 <div id="maDivMenu"> 
-   <ul id="monMenu"> 
-     <li><a href="index.html" title="Accueil" class="current">Accueil</a></li> 
-     <li><a href="index.html" title="Presentation" class="current">Présentation</a></li> 
-     <li><a href="index.html" title="Articles" class="current">Articles</a></li> 
-     <li><a href="index.html" title="Tutos" class="current">Tutos</a></li> 
-      <li><a href="index.html" title="Forums" class="current">Forums</a></li> 
-      <li><a href="index.html" title="Nous contacter" class="current">Nous contacter</a></li> 
-   </ul> 
-</div>
-<form name="maCalculette" action="" onSubmit="affResult();return false;"> 
-<div id="contenuPage"> 
-  <table class="calc"> 
-  <tr> 
-      <td colspan="4" class="ecran"> 
-      <input type="text" name="ecran" class="ecran" /> 
-      </td> 
-  </tr> 
-  <tr> 
-    <td classe="boutons"><input type="button" class="unBouton" value="7" 
-onClick="touche('7')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="8" 
-onClick="touche('8')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="9" 
-onClick="touche('9')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="&divide;" 
-onClick="touche('/')" /></td> 
-  </tr> 
-  <tr> 
-    <td classe="boutons"><input type="button" class="unBouton" value="4" 
-onClick="touche('4')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="5" 
-onClick="touche('5')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="6" 
-onClick="touche('6')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="x" 
-onClick="touche('*')" /></td> 
-  </tr> 
-  <tr> 
-    <td classe="boutons"><input type="button" class="unBouton" value="1" 
-onClick="touche('1')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="2" 
-onClick="touche('2')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="3" 
-onClick="touche('3')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="-" onClick="touche('-')" /></td> 
-  </tr> 
-  <tr> 
-    <td classe="boutons"><input type="button" class="unBouton" value="0" 
-onClick="touche('0')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="." 
-onClick="touche('.')" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="=" 
-onClick="affResult()" /></td> 
-    <td classe="boutons"><input type="button" class="unBouton" value="+" 
-onClick="touche('+')" /></td> 
-  </tr> 
-       </table> 
-   </div> 
-</form>
-</body>
+    <ul id="monMenu"> 
+      <li><a href="index.php" title="Accueil"  
+       <?php if (!isset($_GET['page'])) echo "class=\"current\""; ?> >    
+           
+      Accueil</a> 
+       </li> 
+      <li><a href="index.php?page=presentation" title="Présentation" 
+      <?php if (isset($_GET['page'])) 
+          if ($_GET['page']=="presentation") 
+            echo "class=\"current\""; ?> > 
+      Présentation</a> 
+      </li> 
+      <li><a href="index.php?page=articles" title="Articles" 
+      <?php if (isset($_GET['page'])) 
+        if ($_GET['page']=="articles") 
+          echo "class=\"current\""; ?> > 
+      Articles</a> 
+      </li> 
+      <li><a href="index.php?page=tutos" title="Tutos" 
+      <?php if (isset($_GET['page'])) 
+        if ($_GET['page']=="tutos") 
+          echo "class=\"current\""; ?> > 
+      Tutos</a> 
+      </li> 
+      <li><a href="index.php?page=forums" title="Forums" 
+      <?php if (isset($_GET['page'])) 
+        if ($_GET['page']=="forums") 
+          echo "class=\"current\""; ?> > 
+      Forums</a> 
+      </li> 
+      <li><a href="index.php?page=nous-contacter" title="Nous contacter" 
+      <?php if (isset($_GET['page'])) 
+        if ($_GET['page']=="nous-contacter") 
+          echo "class=\"current\""; ?> > 
+      Nous contacter</a> 
 
-
+      </li> 
+    </ul> 
+  </div>
